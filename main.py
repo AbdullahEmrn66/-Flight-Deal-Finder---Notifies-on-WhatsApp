@@ -40,8 +40,9 @@ def starting_questions():
 
 def send_mails(my_message: str):
     print("Sending emails.....")
-    my_email = "abdullahimran2142@gmail.com"
-    my_password = "egvgtfomatcaorrz"
+    my_email = os.environ[MY_EMAIL]
+    my_password = os.environ[MY_PASSWORD]
+
 
     mail_list = "https://api.sheety.co/7687b746f7aa3562a45758e38efe0c56/flightHunterUserList/formResponses1"
     sheet_response = requests.get(url=mail_list)
